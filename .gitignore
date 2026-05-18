@@ -1,0 +1,12 @@
+# Eclipse ADT generated files
+.settings/
+.project
+.classpath
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# abapgit local overrides
+*.local.xml
