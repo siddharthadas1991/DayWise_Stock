@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+    <SRVB>
+      <SRVBNAME>ZMATL_DAYSTOCK_SB</SRVBNAME>
+      <DDLANGUAGE>E</DDLANGUAGE>
+      <MASTERLAN>E</MASTERLAN>
+      <DDTEXT>Day-Wise Material Stock OData V4 Binding</DDTEXT>
+      <BINDINGTYPE>ODATA_V4_UI</BINDINGTYPE>
+      <SRVDNAME>ZMATL_DAYSTOCK_SD</SRVDNAME>
+      <VERSION>0001</VERSION>
+    </SRVB>
+  </asx:values>
+</asx:abap>

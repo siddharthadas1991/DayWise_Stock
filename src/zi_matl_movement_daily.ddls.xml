@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+    <DDDDLSRC>
+      <VIEWNAME>ZI_MATL_MOVEMENT_DAILY</VIEWNAME>
+      <DDLANGUAGE>E</DDLANGUAGE>
+      <MASTERLAN>E</MASTERLAN>
+      <DDTEXT>Material Daily Movement - Base View</DDTEXT>
+      <SOURCETYPE>V</SOURCETYPE>
+    </DDDDLSRC>
+  </asx:values>
+</asx:abap>

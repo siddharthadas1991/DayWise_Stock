@@ -1,0 +1,19 @@
+@EndUserText.label: 'Access Control - Day-Wise Stock Report'
+@MappingRole: true
+
+/*
+ * ZC_MATL_DAYWISE_STOCK_RPT – Access Control
+ *
+ * Restricts access by Plant using authorization object M_MSEG_WMB.
+ * Activity 03 = Display.
+ *
+ * To also restrict by Company Code, add a second condition:
+ *   and ( CompanyCode ) = aspect pfcg_auth( F_BKPF_BUK, BUKRS, ACTVT = '03' )
+ *
+ * Assign the role containing M_MSEG_WMB to the relevant business users
+ * via Maintain Business Users (S/4HANA Public Cloud).
+ */
+define role ZC_MATL_DAYWISE_STOCK_RPT {
+  grant select on ZC_MATL_DAYWISE_STOCK_RPT
+    where ( Plant ) = aspect pfcg_auth( M_MSEG_WMB, WERKS, ACTVT = '03' );
+}

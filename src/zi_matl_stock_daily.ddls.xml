@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+    <DDDDLSRC>
+      <VIEWNAME>ZI_MATL_STOCK_DAILY</VIEWNAME>
+      <DDLANGUAGE>E</DDLANGUAGE>
+      <MASTERLAN>E</MASTERLAN>
+      <DDTEXT>Material Opening and Closing Stock Day Wise</DDTEXT>
+      <SOURCETYPE>V</SOURCETYPE>
+    </DDDDLSRC>
+  </asx:values>
+</asx:abap>

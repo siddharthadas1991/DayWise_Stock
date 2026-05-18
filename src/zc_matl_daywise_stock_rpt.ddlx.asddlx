@@ -1,0 +1,50 @@
+@Metadata.layer: #CUSTOMER
+
+@UI.chart: [
+  {
+    qualifier:          'StockTrendChart',
+    title:              'Daily Stock Trend',
+    description:        'Opening vs Closing stock over time',
+    chartType:          #LINE,
+    dimensions:         ['PostingDate','Material'],
+    measures:           ['OpeningStock','ClosingStock'],
+    measureAttributes:  [
+      { measure: 'OpeningStock', role: #AXIS_1 },
+      { measure: 'ClosingStock', role: #AXIS_1 }
+    ],
+    dimensionAttributes: [
+      { dimension: 'PostingDate', role: #CATEGORY },
+      { dimension: 'Material',    role: #SERIES    }
+    ]
+  },
+  {
+    qualifier:          'MovementChart',
+    title:              'Daily Receipts vs Issues',
+    description:        'Goods receipts and goods issues by day',
+    chartType:          #COLUMN,
+    dimensions:         ['PostingDate'],
+    measures:           ['ReceiptQty','IssueQty'],
+    measureAttributes:  [
+      { measure: 'ReceiptQty', role: #AXIS_1 },
+      { measure: 'IssueQty',   role: #AXIS_1 }
+    ],
+    dimensionAttributes: [
+      { dimension: 'PostingDate', role: #CATEGORY }
+    ]
+  }
+]
+
+@UI.presentationVariant: [{
+  qualifier:      'Default',
+  sortOrder:      [{ by: 'PostingDate', direction: #ASC }],
+  visualizations: [{ type: #AS_LINEITEM }]
+}]
+
+annotate view ZC_MATL_DAYWISE_STOCK_RPT with
+{
+  @UI.selectionField: [{ position: 10 }] PostingDate;
+  @UI.selectionField: [{ position: 20 }] Material;
+  @UI.selectionField: [{ position: 30 }] Plant;
+  @UI.selectionField: [{ position: 40 }] StorageLocation;
+  @UI.selectionField: [{ position: 50 }] CompanyCode;
+}

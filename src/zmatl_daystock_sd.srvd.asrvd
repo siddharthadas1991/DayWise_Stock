@@ -1,0 +1,14 @@
+@EndUserText.label: 'Day-Wise Material Stock – Service Definition'
+
+/*
+ * ZMATL_DAYSTOCK_SD
+ * OData V4 Service Definition
+ *
+ * Exposes ZC_MATL_DAYWISE_STOCK_RPT as the root entity set.
+ * After activation, publish via:
+ *   Business Configuration → Custom CDS Views → Publish
+ * or use the Service Manager in ADT.
+ */
+define service ZMATL_DAYSTOCK_SD {
+  expose ZC_MATL_DAYWISE_STOCK_RPT as DayWiseMaterialStock;
+}
